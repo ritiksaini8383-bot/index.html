@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background for floating hearts -->
+    <div class="hearts-container" id="hearts-container"></div>
+
+    <div class="container">
+        <!-- Section 1: Welcome -->
+        <section id="section1" class="active">
+            <div class="card">
+                <h1>Hey Beautiful,</h1>
+                <p>I built a little world for you, just to bring a smile to your face on your special day.</p>
+                <button class="btn" onclick="nextSection(2)">Let's Begin</button>
+            </div>
+        </section>
+
+        <!-- Section 2: Birthday Greeting -->
+        <section id="section2">
+            <div class="card">
+                <h1>Happy Birthday!</h1>
+                <p>Another year of you making the world brighter. Your existence is a gift, and I'm so lucky to witness it.</p>
+                <button class="btn" onclick="nextSection(3)">There's more...</button>
+            </div>
+        </section>
+
+        <!-- Section 3: Adore -->
+        <section id="section3">
+            <div class="card">
+                <h2 class="title-pink">A Few Things I Adore About You</h2>
+                <div class="adore-grid">
+                    <div class="adore-item">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h3>Your Unmatched Kindness</h3>
+                            <p>The genuine warmth you show to everyone is something truly rare and beautiful.</p>
+                        </div>
+                    </div>
+                    <div class="adore-item">
+                        <i class="fas fa-smile"></i>
+                        <div>
+                            <h3>That Smile</h3>
+                            <p>It's a work of art that lights up the whole room.</p>
+                        </div>
+                    </div>
+                    <div class="adore-item">
+                        <i class="fas fa-sun"></i>
+                        <div>
+                            <h3>Your Radiant Spirit</h3>
+                            <p>Your passion for life is infectious. Being around you makes everything feel possible.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" onclick="nextSection(4)">Remember this?</button>
+            </div>
+        </section>
+
+        <!-- Section 4: Memory -->
+        <section id="section4">
+            <div class="card">
+                <h2 class="title-pink">That One Time...</h2>
+                <div class="memory-image-container">
+                    <!-- REPLACE 'memory.jpg' WITH YOUR OWN IMAGE FILENAME -->
+                    <img src="memory.jpg" alt="Our favorite memory" onerror="this.src='https://via.placeholder.com/400x300?text=Your+Photo+Here'">
+                    <p class="img-caption">Our favorite memory.</p>
+                </div>
+                <p>Every moment with you feels like a scene from a movie I'd watch on repeat.</p>
+                <button class="btn" onclick="nextSection(5)">One last thing...</button>
+            </div>
+        </section>
+
+        <!-- Section 5: Wish -->
+        <section id="section5">
+            <div class="card">
+                <i class="fas fa-birthday-cake fa-3xl cake-icon"></i>
+                <h2 class="title-pink">My Wish For You</h2>
+                <p>May the next year bring you all the love, success, and pure happiness you so rightfully deserve. May your dreams soar higher than ever.</p>
+                <p class="final-wish"><strong>Happy Birthday, my crush! ❤️</strong></p>
+                <button class="btn" onclick="celebrate()">Celebrate! 🎉</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

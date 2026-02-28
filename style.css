@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #ff4d94;
+    --secondary-color: #702283;
+    --bg-dark: #0d0d0d;
+    --card-bg: rgba(255, 255, 255, 0.07);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: white;
+    overflow: hidden; /* Prevents scrollbars during animations */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Floating Hearts Background */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: var(--primary-color);
+    animation: float 5s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes float {
+    0% { transform: translateY(110vh) scale(0); opacity: 0; }
+    20% { opacity: 0.6; }
+    80% { opacity: 0.6; }
+    100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+
+/* Layout and Cards */
+.container {
+    width: 90%;
+    max-width: 500px;
+    z-index: 10;
+}
+
+section {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h1 { font-size: 2.2rem; margin-bottom: 15px; }
+.title-pink { color: var(--primary-color); margin-bottom: 25px; }
+
+p { line-height: 1.6; color: #e0e0e0; margin-bottom: 30px; }
+
+/* Buttons */
+.btn {
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    border: none;
+    padding: 14px 35px;
+    border-radius: 30px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 77, 148, 0.4);
+}
+
+/* Adore Section Items */
+.adore-grid { text-align: left; margin-bottom: 30px; }
+.adore-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
+.adore-item i { color: var(--primary-color); margin-right: 15px; margin-top: 5px; font-size: 1.2rem; }
+.adore-item h3 { margin: 0; font-size: 1.1rem; color: #fff; }
+.adore-item p { margin: 5px 0 0; font-size: 0.9rem; color: #bbb; }
+
+/* Memory Section Image */
+.memory-image-container {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+.memory-image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.img-caption { margin-top: 10px; font-style: italic; font-size: 0.9rem; margin-bottom: 0; }
+
+/* Final Section */
+.cake-icon { color: var(--primary-color); margin-bottom: 20px; font-size: 3.5rem; }
+.final-wish { font-size: 1.2rem; color: #fff; }
